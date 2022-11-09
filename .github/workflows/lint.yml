@@ -1,0 +1,25 @@
+name: Lint codes
+
+on:
+  pull_request:
+    branches:
+      - main
+
+env:
+  node-version: lts/*
+
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.node-version }}
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Lint
+        run: yarn lint
