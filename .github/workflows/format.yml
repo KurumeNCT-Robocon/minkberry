@@ -1,0 +1,25 @@
+name: Prettier codes
+
+on:
+  pull_request:
+    branches:
+      - main
+
+env:
+  node-version: lts/*
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.node-version }}
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Format check
+        run: yarn format:check
