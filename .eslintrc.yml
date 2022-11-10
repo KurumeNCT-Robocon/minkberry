@@ -21,6 +21,7 @@ rules:
     - 2
     - namedComponents: arrow-function
   react/jsx-props-no-spreading: off
+  react/prop-types: off
 settings:
   import/resolver:
     typescript: []
