@@ -1,4 +1,3 @@
-import React from "react";
 import { Icon, VStack } from "@chakra-ui/react";
 import { FaBox, FaCog, FaPencilAlt, FaQuestion } from "react-icons/fa";
 import HoverLinkWithIcon from "./HoverLinkWithIcon";
