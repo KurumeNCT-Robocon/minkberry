@@ -9,13 +9,13 @@ import {
   IconButton,
   useDisclosure,
 } from "@chakra-ui/react";
-import React from "react";
+import { useRef } from "react";
 import { FaBars } from "react-icons/fa";
 import SideBar from "./SideBar";
 
 const DrawerMenu: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const buttonRef = React.useRef<HTMLButtonElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   return (
     <>

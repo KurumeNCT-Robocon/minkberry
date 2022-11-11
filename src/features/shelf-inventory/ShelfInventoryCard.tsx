@@ -9,7 +9,6 @@ import {
   Tr,
 } from "@chakra-ui/react";
 import { DateTime } from "luxon";
-import React from "react";
 
 type ShelfInventoryCardProps = {
   /**

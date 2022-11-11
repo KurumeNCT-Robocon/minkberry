@@ -1,5 +1,4 @@
 import { Box, Heading, Stack } from "@chakra-ui/react";
-import React from "react";
 import DrawerMenu from "../ui-parts/DrawerMenu";
 import SideBar from "../ui-parts/SideBar";
 
