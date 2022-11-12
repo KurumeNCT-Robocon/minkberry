@@ -1,4 +1,10 @@
-import { Box, Container, Heading, Stack, useBreakpointValue } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Heading,
+  Stack,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import DrawerMenu from "../ui-parts/DrawerMenu";
 import SideBar from "../ui-parts/SideBar";
 
