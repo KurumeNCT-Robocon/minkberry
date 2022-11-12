@@ -20,6 +20,5 @@ WorkBoxStory.args = {
   boxTitle: "箱１",
   userName: "唯岸雪",
   startUpDate: DateTime.fromISO("2022-10-11"),
-  purpose: "犯人は箱が欲しかったなどと供述しており。\n完成した基板入れ"
+  purpose: "犯人は箱が欲しかったなどと供述しており。\n完成した基板入れ",
 };
-
