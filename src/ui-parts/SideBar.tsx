@@ -1,29 +1,32 @@
-import { Icon, VStack } from "@chakra-ui/react";
+import { Button, VStack } from "@chakra-ui/react";
 import { FaBox, FaCog, FaPencilAlt, FaQuestion } from "react-icons/fa";
-import HoverLinkWithIcon from "./HoverLinkWithIcon";
 
 const SideBar: React.FC = () => (
-  <VStack spacing="xl" as="nav">
-    <HoverLinkWithIcon
+  <VStack as="nav" width="full">
+    <Button leftIcon={<FaBox />} variant="ghost" width="full" as="a" href="#">
+      在庫
+    </Button>
+    <Button
+      leftIcon={<FaPencilAlt />}
+      variant="ghost"
+      width="full"
+      as="a"
       href="#"
-      iconComponent={<Icon as={FaBox} />}
-      content="在庫"
-    />
-    <HoverLinkWithIcon
+    >
+      作業
+    </Button>
+    <Button
+      leftIcon={<FaQuestion />}
+      variant="ghost"
+      width="full"
+      as="a"
       href="#"
-      iconComponent={<Icon as={FaPencilAlt} />}
-      content="作業"
-    />
-    <HoverLinkWithIcon
-      href="#"
-      iconComponent={<Icon as={FaQuestion} />}
-      content="ヘルプ"
-    />
-    <HoverLinkWithIcon
-      href="#"
-      iconComponent={<Icon as={FaCog} />}
-      content="設定"
-    />
+    >
+      ヘルプ
+    </Button>
+    <Button leftIcon={<FaCog />} variant="ghost" width="full" as="a" href="#">
+      設定
+    </Button>
   </VStack>
 );
 
