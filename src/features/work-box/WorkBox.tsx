@@ -1,10 +1,10 @@
 import { Box, Stack, Text } from "@chakra-ui/react";
-import luxon from "luxon";
+import {DateTime} from "luxon";
 
 type WorkBoxProps = {
   title: string;
   userName: string;
-  startUpDate: Date;
+  startUpDate: DateTime;
   purpose: string;
 };
 
@@ -12,16 +12,22 @@ const WorkBox: React.FC<WorkBoxProps> = ({
   title,
   userName,
   startUpDate,
-  purpose, }) =>(
+  purpose, }) =>{
+    const today = DateTime.now();
+
+    return(
     <Box>
       <Stack>
         <Text>{title}</Text>
         <Text>{"使用者"}</Text>
         <Text>{userName}</Text>
-        <Text>{"使用日"}</Text>
-        <Text>{startUpDate.getDate}</Text>
+        <Text>{"使用開始日"}</Text>
+        <Text>{startUpDate.toString() }</Text>
+        <Text>{"目的"}</Text>
+        <Text>{purpose}</Text>
       </Stack>
     </Box>
-  );
+    )
+  };
 
 export default WorkBox;
