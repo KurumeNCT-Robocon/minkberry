@@ -1,10 +1,4 @@
-import {
-  Box,
-  Container,
-  Heading,
-  Stack,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Box, Heading, Stack } from "@chakra-ui/react";
 import DrawerMenu from "../ui-parts/DrawerMenu";
 import SideBar from "../ui-parts/SideBar";
 
@@ -13,52 +7,29 @@ type ContentPageLayoutProps = {
   children: React.ReactNode;
 };
 
-const MobileLayout: React.FC<ContentPageLayoutProps> = ({
-  title,
-  children,
-}) => (
-  <Stack padding={5}>
-    <Stack direction="row">
-      <Box>
-        <DrawerMenu />
-      </Box>
-
-      <Heading>{title}</Heading>
-    </Stack>
-
-    <Box width="full">{children}</Box>
-  </Stack>
-);
-
-const DesktopLayout: React.FC<ContentPageLayoutProps> = ({
-  title,
-  children,
-}) => (
-  <Container maxWidth={1500} padding={10}>
-    <Stack>
-      <Heading>{title}</Heading>
-
-      <Stack direction="row">
-        <Box width={300} pr={8}>
-          <SideBar />
-        </Box>
-
-        <Box width="80%">{children}</Box>
-      </Stack>
-    </Stack>
-  </Container>
-);
-
 const LayoutWithMenu: React.FC<ContentPageLayoutProps> = ({
   title,
   children,
-}) => {
-  const isMobile = useBreakpointValue({ base: true, md: false });
+}) => (
+  <Box width="full" padding={{ base: 6, md: 16 }}>
+    <Stack>
+      <Stack direction="row">
+        <Box display={{ base: "block", md: "none" }}>
+          <DrawerMenu />
+        </Box>
 
-  if (isMobile) {
-    return <MobileLayout title={title}>{children}</MobileLayout>;
-  }
-  return <DesktopLayout title={title}>{children}</DesktopLayout>;
-};
+        <Heading>{title}</Heading>
+      </Stack>
+
+      <Stack direction="row" spacing={{ base: 0, md: 10 }}>
+        <Box width="sm" display={{ base: "none", md: "block" }}>
+          <SideBar />
+        </Box>
+
+        <Box width="full">{children}</Box>
+      </Stack>
+    </Stack>
+  </Box>
+);
 
 export default LayoutWithMenu;
