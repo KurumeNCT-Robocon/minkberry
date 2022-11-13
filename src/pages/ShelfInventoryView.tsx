@@ -1,5 +1,4 @@
 import { DateTime } from "luxon";
-import React from "react";
 import { VStack } from "@chakra-ui/react";
 import ShelfInventoryCard from "../features/shelf-inventory/ShelfInventoryCard";
 import ContentPage from "../layouts/ContentPage";

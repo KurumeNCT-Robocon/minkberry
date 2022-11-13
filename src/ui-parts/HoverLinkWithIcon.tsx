@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Text, HStack } from "@chakra-ui/react";
 import HoverLink from "../ui-elements/HoverLink";
 
