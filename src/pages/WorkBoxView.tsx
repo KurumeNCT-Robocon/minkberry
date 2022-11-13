@@ -1,12 +1,10 @@
 import { DateTime } from "luxon";
-import { VStack, Icon, Button, Text } from "@chakra-ui/react";
+import { VStack, Button } from "@chakra-ui/react";
 import { FC } from "react";
 import { FaPencilAlt } from "react-icons/fa";
 import WorkBoxCard from "../features/work-box/WorkBoxCard";
 import type { WorkBox } from "../features/work-box/DataTypes";
 import ContentPage from "../layouts/ContentPage";
-import HoverLinkWithIcon from "../ui-parts/HoverLinkWithIcon";
-import HoverLink from "../ui-elements/HoverLink";
 
 const boxes: WorkBox[] = [
   {
@@ -29,9 +27,7 @@ const WorkBoxView: FC = () => (
       colorScheme="teal"
       variant="ghost"
       size="lg"
-      as={HoverLink}
       leftIcon={<FaPencilAlt />}
-      href="#"
       padding={4}
       width={{ base: "24rem", sm: "38rem", md: "34rem", lg: "42rem" }}
       borderWidth={1}
