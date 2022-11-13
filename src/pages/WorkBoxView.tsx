@@ -17,10 +17,12 @@ const boxes: WorkBox[] = [
     boxTitle: "箱２",
     userName: "あかり",
     startUpDate: DateTime.fromISO("2022-11-11"),
-    purpose: "進捗を生成するので使います", },
+    purpose: "進捗を生成するので使います",
+  },
 ];
 
 const WorkBoxView: FC = () => (
+  //  const { isOpen, onOpen, onClose } = useDisclosure();
   <ContentPage title="使用中の箱">
     <Button
       colorScheme="teal"
@@ -34,6 +36,7 @@ const WorkBoxView: FC = () => (
     >
       編集
     </Button>
+
     <VStack>
       {boxes.map(box => (
         <WorkBoxCard
@@ -47,5 +50,4 @@ const WorkBoxView: FC = () => (
     </VStack>
   </ContentPage>
 );
-
 export default WorkBoxView;

@@ -32,11 +32,13 @@ const LayoutWithMenu: React.FC<ContentPageLayoutProps> = ({
       </Box>
 
       <Box>{children}</Box>
-      <MemoCard
-        width="300"
-        height="500"
-        placeholder="このメモは保存されません"
-      />
+      <Box display={{ base: "none", md: "block" }} px={6}>
+        <MemoCard
+          width={300}
+          height={500}
+          placeholder="このメモは保存されません"
+        />
+      </Box>
     </Stack>
   </Stack>
 );
