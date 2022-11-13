@@ -44,14 +44,22 @@ const WorkBoxCard: React.FC<WorkBoxCardProps> = ({
       borderWidth={1}
       margin={2}
     >
-      <Stack>
-        <Text fontWeight="bold" color="teal.600">
+      <Stack
+        align={{ base: "center", md: "stretch" }}
+        textAlign={{ base: "center", md: "left" }}
+        margin-top={{ base: 4, md: 0 }}
+        margin-left={{ md: 6 }}
+      >
+        <Text
+          fontWeight="bold"
+          fontSize="xl"
+          letterSpacing="wide"
+          color="teal.600"
+        >
           {boxTitle}
-        </Text>{" "}
+        </Text>
         <TableContainer>
-          {" "}
-          <Table>
-            {" "}
+          <Table variant="simple">
             <Tbody>
               <Tr>
                 <Td>
@@ -65,11 +73,17 @@ const WorkBoxCard: React.FC<WorkBoxCardProps> = ({
                 </Td>
                 <Td>{dateDiff}日</Td>
               </Tr>
+              <Tr>
+                <Td>
+                  <Text fontWeight="bold">使用目的</Text>
+                </Td>
+                <Td>
+                  <Box whiteSpace="pre-line">{purpose}</Box>
+                </Td>
+              </Tr>
             </Tbody>
           </Table>
         </TableContainer>
-        <Text fontWeight="bold">目的</Text>
-        <Text whiteSpace="pre-line">{purpose}</Text>
       </Stack>
     </Box>
   );
