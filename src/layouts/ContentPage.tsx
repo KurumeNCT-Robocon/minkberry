@@ -1,6 +1,7 @@
 import { Box, Heading, Stack } from "@chakra-ui/react";
 import React from "react";
 import DrawerMenu from "../ui-parts/DrawerMenu";
+import MemoCard from "../ui-parts/MemoCard";
 import SideBar from "../ui-parts/SideBar";
 
 type ContentPageLayoutProps = {
@@ -31,6 +32,11 @@ const LayoutWithMenu: React.FC<ContentPageLayoutProps> = ({
       </Box>
 
       <Box>{children}</Box>
+      <MemoCard
+        width="300"
+        height="500"
+        placeholder="このメモは保存されません"
+      />
     </Stack>
   </Stack>
 );

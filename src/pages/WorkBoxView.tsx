@@ -17,8 +17,7 @@ const boxes: WorkBox[] = [
     boxTitle: "箱２",
     userName: "あかり",
     startUpDate: DateTime.fromISO("2022-11-11"),
-    purpose: "進捗を生成するので使います",
-  },
+    purpose: "進捗を生成するので使います", },
 ];
 
 const WorkBoxView: FC = () => (
