@@ -38,12 +38,7 @@ const WorkBoxCard: React.FC<WorkBoxCardProps> = ({
   const dateDiff = Math.trunc(today.diff(startUpDate, ["days"]).days);
 
   return (
-    <Box
-      padding={4}
-      width={{ base: "24rem", sm: "38rem", md: "34rem", lg: "42rem" }}
-      borderWidth={1}
-      margin={2}
-    >
+    <Box padding={4} width="full" borderWidth={1}>
       <Stack
         align={{ base: "center", md: "stretch" }}
         textAlign={{ base: "center", md: "left" }}
