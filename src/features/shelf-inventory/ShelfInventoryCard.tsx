@@ -35,15 +35,10 @@ const ShelfInventoryCard: React.FC<ShelfInventoryCardProps> = ({
   count,
   notes,
 }) => (
-  <Box
-    padding={4}
-    width={{ base: "24rem", sm: "38rem", md: "34rem", lg: "42rem" }}
-    borderWidth={1}
-    margin={2}
-  >
+  <Box padding={4} width="full" borderWidth={1}>
     <Stack
-      align={{ base: "center", md: "stretch" }}
-      textAlign={{ base: "center", md: "left" }}
+      align="stretch"
+      textAlign="left"
       margin-top={{ base: 4, md: 0 }}
       margin-left={{ md: 6 }}
     >
@@ -60,7 +55,7 @@ const ShelfInventoryCard: React.FC<ShelfInventoryCardProps> = ({
         <Table variant="simple">
           <Tbody>
             <Tr>
-              <Td>
+              <Td width="20%">
                 <Text fontWeight="bold">個数</Text>
               </Td>
               <Td>{count}個</Td>

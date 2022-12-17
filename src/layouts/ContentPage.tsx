@@ -11,27 +11,25 @@ const LayoutWithMenu: React.FC<ContentPageLayoutProps> = ({
   title,
   children,
 }) => (
-  <Stack>
-    <Stack direction="row" padding={5}>
-      <Box display={{ base: "block", md: "none" }}>
-        {" "}
-        {/* for mobile */}
-        <DrawerMenu />
-      </Box>
+  <Box width="full" padding={{ base: 6, md: 16 }}>
+    <Stack>
+      <Stack direction="row">
+        <Box display={{ base: "block", md: "none" }}>
+          <DrawerMenu />
+        </Box>
 
-      <Heading>{title}</Heading>
+        <Heading>{title}</Heading>
+      </Stack>
+
+      <Stack direction="row" spacing={{ base: 0, md: 10 }}>
+        <Box width="sm" display={{ base: "none", md: "block" }}>
+          <SideBar />
+        </Box>
+
+        <Box width="full">{children}</Box>
+      </Stack>
     </Stack>
-
-    <Stack direction="row" alignItems="start">
-      <Box display={{ base: "none", md: "block" }} width={300} px={6}>
-        {" "}
-        {/* for desktop */}
-        <SideBar />
-      </Box>
-
-      <Box>{children}</Box>
-    </Stack>
-  </Stack>
+  </Box>
 );
 
 export default LayoutWithMenu;
